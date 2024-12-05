@@ -1,2 +1,5 @@
-# Software-testing-lab-4
-This is lab 4, code review, for the software testing course.
+Changes made
+
+- While loop to search several times.
+- Make it possible to exit
+- Change from args to command line style

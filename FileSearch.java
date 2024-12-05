@@ -14,13 +14,17 @@ public class FileSearch {
         String pattern = null;
         String filePath = null;
 
-        if (args.length == 3 && args[2].equals("-i")) {
+        if (args.length == 4 && args[3].equals("-i")) {
             ignoreCase = true;
         }
 
         if (args.length >= 2) {
-            pattern = args[0];
-            filePath = args[1];
+            if (!args[0].equals("search")) {
+                System.out.println("Usage: search <pattern> <file> [-i]");
+                return;
+            }
+            pattern = args[1];
+            filePath = args[2];
         } else {
             System.out.println("Usage: search <pattern> <file> [-i]");
             return;
